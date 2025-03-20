@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>フォーム送信結果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>送信されたユーザー情報</h1>
+
+    <table>
+        <tr>
+            <th>項目</th>
+            <th>内容</th>
+        </tr>
+        <tr>
+            <td>名前</td>
+            <td>{{ form.name.data }}</td>
+        </tr>
+        <tr>
+            <td>メールアドレス</td>
+            <td>{{ form.email.data }}</td>
+        </tr>
+        <tr>
+            <td>電話番号</td>
+            <td>{{ form.phone.data }}</td>
+        </tr>
+        <tr>
+            <td>住所</td>
+            <td>{{ form.address.data }}</td>
+        </tr>
+        <tr>
+            <td>市区町村</td>
+            <td>{{ form.city.data }}</td>
+        </tr>
+        <tr>
+            <td>都道府県</td>
+            <td>{{ form.state.data }}</td>
+        </tr>
+        <tr>
+            <td>郵便番号</td>
+            <td>{{ form.zip.data }}</td>
+        </tr>
+        <tr>
+            <td>国</td>
+            <td>{{ form.country.data }}</td>
+        </tr>
+    </table>
+
+</body>
+</html>
